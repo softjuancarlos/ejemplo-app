@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/platzijuan/public_html/
-    - /bin/mv -a public/. $DEPLOYPATH
+    - /bin/mv public/. $DEPLOYPATH
