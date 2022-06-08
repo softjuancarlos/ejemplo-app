@@ -44,7 +44,7 @@ require __DIR__.'/../ejemplo-app/vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../ejemplo-app/bootstrap/app.php';
+$app = require_once __DIR__.'/../ejemplo-app/bootstrap/app.php'; 
 
 $kernel = $app->make(Kernel::class);
 
