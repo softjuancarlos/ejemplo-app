@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/platzijuan/public_html/
-    - mv public/.* $DEPLOYPATH 
+    - /bin/mv public/.* $DEPLOYPATH 
+    - /bin/mv public/.htaccess $DEPLOYPATH 
