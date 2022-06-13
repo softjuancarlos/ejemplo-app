@@ -19,7 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/dashboard';
 
-    /**
+    /** 
      * Define your route model bindings, pattern filters, and other route configuration.
      *
      * @return void
@@ -29,6 +29,16 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
+            
+            $api = ['api'];
+            $web =  ['web'];
+
+            if (config('multitenancy.enabled'))
+            {
+                array_push( $api,'tenant.api' );
+                array_push( $web,'tenant.web' );
+            }
+
             Route::middleware('api')
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
